@@ -1,5 +1,15 @@
 CORS 
 Cross-origin Resource Sharing
 troca de recursos de origens diferentes
+Atualmente o cors está liberando todos os sites e metodos. (API Aberta)
 
-Atualmente o cors está liberando todos os sites e metodos.
+CRUD de FRASES
+
+POST /frases - criar frases novas
+GET /frases - listar todas as frases
+GET /frases/1 - pegar informações de uma frase
+PUT /frases/1 - Atualizar informações de uma frase
+DELETE /frase1 - Deletar uma frase
+
+
+
