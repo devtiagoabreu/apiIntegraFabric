@@ -11,3 +11,7 @@ npx tsc --init
 npm install -D @types/express @types/node @types/sequelize @types/validator
 # start  project
 npm run start-dev
+
+# instalando cors
+npm install cors
+npm install -D @types/cors

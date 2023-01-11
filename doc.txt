@@ -1,0 +1,5 @@
+CORS 
+Cross-origin Resource Sharing
+troca de recursos de origens diferentes
+
+Atualmente o cors está liberando todos os sites e metodos.
