@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Frase } from "../models/frase";
+import { Frase } from "../models/Frase";
 
 export const ping = (req: Request, res: Response) => {
   res.json({pong: true});
@@ -14,3 +14,12 @@ export const nome = (req: Request, res: Response) => {
   let nome: string = req.params.nome;
   res.json({nome})
 }
+
+export const criarFrase = async (req: Request, res: Response) => {
+  let { autor, txt } = req.body;
+
+  let novaFrase = await Frase.create({ autor, txt });
+
+  res.json({id: novaFrase.id, autor, txt});
+}
+

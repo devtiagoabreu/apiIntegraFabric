@@ -9,6 +9,7 @@ export const sequelize = new Sequelize(
   process.env.MDB_PASSWORD as string,
   {
     dialect: 'mysql',
+    host: process.env.MDB_HOST as string,
     port: parseInt(process.env.MDB_PORT as string)
   }
 );
