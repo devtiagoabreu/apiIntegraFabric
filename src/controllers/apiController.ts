@@ -20,6 +20,7 @@ export const criarFrase = async (req: Request, res: Response) => {
 
   let novaFrase = await Frase.create({ autor, txt });
 
+  res.status(201);
   res.json({id: novaFrase.id, autor, txt});
 }
 

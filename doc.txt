@@ -11,5 +11,16 @@ GET /frases/1 - pegar informações de uma frase
 PUT /frases/1 - Atualizar informações de uma frase
 DELETE /frase1 - Deletar uma frase
 
+Entendendo HTTP Status Code
+Código de status de respostas HTTP
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+ex:
+200 OK
+
+    Estas requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP:
+
+
+
 
 
