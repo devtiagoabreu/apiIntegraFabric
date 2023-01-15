@@ -18,7 +18,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 ex:
 200 OK
 
-    Estas requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP:
+    Esta requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP:
 
 
 
