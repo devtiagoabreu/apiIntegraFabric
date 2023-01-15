@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { Frase } from "../models/Frase";
+import sequelize from "sequelize";
 
 export const ping = (req: Request, res: Response) => {
   res.json({pong: true});
@@ -75,6 +76,22 @@ export const deletarFrase = async (req: Request, res: Response) => {
   } else {
     res.status(406);
     res.json({ error: 'Frase não encontrada' })
+  }
+}
+
+export const randomFrase = async (req: Request, res: Response) => {
+  let frase = await Frase.findOne({
+    order: [
+      sequelize.fn('RAND')
+    ]
+  });
+    
+  if (frase) {
+    res.status(200);
+    res.json({ frase });
+  } else {
+    res.status(406);
+    res.json({ error: 'A base de dados ainda não possui frases' })
   }
 }
 
