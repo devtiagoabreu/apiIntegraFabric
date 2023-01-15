@@ -63,3 +63,18 @@ export const atualizarFrase = async (req: Request, res: Response) => {
   }
 }
 
+export const deletarFrase = async (req: Request, res: Response) => {
+  let { id } = req.params;
+  
+  let frase = await Frase.findByPk(id);
+  if (frase) {
+    await Frase.destroy({ where: { id } });
+
+    res.status(200);
+    res.json({ sucess: 'Frase deletada com sucesso' })
+  } else {
+    res.status(406);
+    res.json({ error: 'Frase não encontrada' })
+  }
+}
+
