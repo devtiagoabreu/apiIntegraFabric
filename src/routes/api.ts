@@ -19,6 +19,7 @@ router.put('/frase/:id', ApiController.atualizarFrase);
 router.delete('/frase/:id', ApiController.deletarFrase);
 
 router.get('/contasReceber', ReceberController.listarContasReceber);
+router.get('/contasReceberSaldoTotalProgramado', ReceberController.contasReceberSaldoTotalProgramado);
 
 
 export default router;
