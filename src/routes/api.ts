@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import * as ApiController from "../controllers/apiController";
+import * as ReceberController from "../controllers/receberController";
 
 const router = Router();
 
@@ -16,6 +17,8 @@ router.get('/frase/aleatoria', ApiController.randomFrase);
 router.get('/frase/:id', ApiController.retornarFrase);
 router.put('/frase/:id', ApiController.atualizarFrase);
 router.delete('/frase/:id', ApiController.deletarFrase);
+
+router.get('/contasReceber', ReceberController.listarContasReceber);
 
 
 export default router;
