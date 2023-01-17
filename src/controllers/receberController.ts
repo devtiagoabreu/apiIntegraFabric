@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { ContasReceber } from "../models/ContasReceber";
 import { ContasReceberSaldoTotalProgramado } from "../models/ContasReceberSaldoTotalProgramado";
+import { ContasReceberSaldoTotalMesAtual } from "../models/ContasReceberSaldoTotalMesAtual";
 import sequelize from "sequelize";
 
 export const listarContasReceber = async (req: Request, res: Response) => {
@@ -17,5 +18,13 @@ export const contasReceberSaldoTotalProgramado = async (req: Request, res: Respo
 
   res.status(200);
   res.json({ receberProgramado });
+}
+
+export const contasReceberSaldoTotalMesAtual = async (req: Request, res: Response) => {
+  
+  let receberMesAtual = await ContasReceberSaldoTotalMesAtual.findOne();
+
+  res.status(200);
+  res.json({ receberMesAtual });
 }
 
