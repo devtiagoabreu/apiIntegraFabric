@@ -11,21 +11,21 @@ export interface ContasReceberInstance extends Model {
 
   duplicata: string;
 
-  TipoTitulo: string
+  tipoTitulo: string
 
-  Portador: string;
+  portador: string;
   
-  Posicao: string;
+  posicao: string;
 
-  DataEmissao: string;
+  dataEmissao: string;
 
-  DataVencto: string;
+  dataVencto: string;
 
-  DataProrrogacao: string;
+  dataProrrogacao: string;
 
-  ValorDuplicata: number;
+  valorDuplicata: number;
 
-  SaldoDuplicata: number;
+  saldoDuplicata: number;
 
   atraso: number;
 }
@@ -46,28 +46,28 @@ export const ContasReceber = sequelize.define<ContasReceberInstance>('ContasRece
   duplicata: {
     type: DataTypes.STRING
   },
-  TipoTitulo: {
+  tipoTitulo: {
     type: DataTypes.STRING
   },
-  Portador: {
+  portador: {
     type: DataTypes.STRING
   },
-  Posicao: {
+  posicao: {
     type: DataTypes.STRING
   },
-  DataEmissao: {
+  dataEmissao: {
     type: DataTypes.STRING
   },
-  DataVencto: {
+  dataVencto: {
     type: DataTypes.STRING
   },
-  DataProrrogacao: {
+  dataProrrogacao: {
     type: DataTypes.STRING
   },
-  ValorDuplicata: {
+  valorDuplicata: {
     type: DataTypes.NUMBER
   },
-  SaldoDuplicata: {
+  saldoDuplicata: {
     type: DataTypes.NUMBER
   },
   atraso: {
