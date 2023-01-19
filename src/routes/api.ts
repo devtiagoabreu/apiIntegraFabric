@@ -3,6 +3,7 @@ import { Router } from 'express';
 import * as ApiController from "../controllers/apiController";
 import * as ReceberController from "../controllers/receberController";
 import * as PagarController from "../controllers/pagarController";
+import * as PagasController from "../controllers/pagasController";
 
 const router = Router();
 
@@ -28,6 +29,11 @@ router.get('/contasReceberSaldoTotalMesAtual', ReceberController.contasReceberSa
 router.get('/contasPagar', PagarController.listarContasPagar);
 router.get('/contasPagarSaldoTotalProgramado', PagarController.contasPagarSaldoTotalProgramado);
 router.get('/contasPagarSaldoTotalMesAtual', PagarController.contasPagarSaldoTotalMesAtual);
+
+// CONTAS PAGAS
+router.get('/contasPagas', PagasController.listarContasPagas);
+router.get('/contasPagasSaldoTotalProgramado', PagasController.contasPagasSaldoTotalProgramado);
+router.get('/contasPagasSaldoTotalMesAtual', PagasController.contasPagasSaldoTotalMesAtual);
 
 
 export default router;

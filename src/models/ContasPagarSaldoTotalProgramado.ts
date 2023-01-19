@@ -3,7 +3,7 @@ import { sequelize } from '../instances/mdb';
 
 export interface ContasPagarSaldoTotalProgramadoInstance extends Model {
   
-  receberProgramado: number;
+  pagarProgramado: number;
 }
 
 export const ContasPagarSaldoTotalProgramado = sequelize.define<ContasPagarSaldoTotalProgramadoInstance>('ContasPagarSaldoTotalProgramado', {
