@@ -4,6 +4,7 @@ import * as ApiController from "../controllers/apiController";
 import * as ReceberController from "../controllers/receberController";
 import * as PagarController from "../controllers/pagarController";
 import * as PagasController from "../controllers/pagasController";
+import * as CaixasFiosController from "../controllers/caixasFiosController";
 
 const router = Router();
 
@@ -34,6 +35,10 @@ router.get('/contasPagarSaldoTotalMesAtual', PagarController.contasPagarSaldoTot
 router.get('/contasPagas', PagasController.listarContasPagas);
 router.get('/contasPagasSaldoTotalProgramado', PagasController.contasPagasSaldoTotalProgramado);
 router.get('/contasPagasSaldoTotalMesAtual', PagasController.contasPagasSaldoTotalMesAtual);
+
+// CAIXAS FIOS
+router.get('/caixasFios', CaixasFiosController.listarCaixasFios);
+router.get('/caixasFiosTotais', CaixasFiosController.caixasFiosTotais);
 
 
 export default router;
