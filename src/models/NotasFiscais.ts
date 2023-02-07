@@ -13,7 +13,7 @@ export interface NotasFiscaisInstance extends Model {
   natureza: string;
   cfop: string;
   descNatureza: string;
-  dataMotivo: string; 
+  dataMovto: string; 
   entradaSaida: string;
   faturamentoSimNao: string;
   parametroNatFat: string;
@@ -43,14 +43,15 @@ export interface NotasFiscaisInstance extends Model {
   valorIpi: number;
   cvfIpi: number;
   baseIcms: number;
+  percIcms: number;
   valorIcms: number;
   cvfIcms: number;
   procedencia: number;
-  baseDiferencia: number;
+  baseDiferenca: number;
   cvfPis: number;
-  cvfConfins: number;
+  cvfCofins: number;
   percPis: number;
-  percConfins: number;
+  percCofins: number;
   basePisCofins: number;
   valorPis: number;
   valorCofins: number;
@@ -95,7 +96,7 @@ export const NotasFiscais = sequelize.define<NotasFiscaisInstance>('NotasFiscais
   descNatureza: {
     type: DataTypes.STRING
   },
-  dataMotivo: {
+  dataMovto: {
     type: DataTypes.STRING
   }, 
   entradaSaida: {
@@ -185,6 +186,9 @@ export const NotasFiscais = sequelize.define<NotasFiscaisInstance>('NotasFiscais
   baseIcms: {
     type: DataTypes.NUMBER
   },
+  percIcms: {
+    type: DataTypes.NUMBER
+  },
   valorIcms: {
     type: DataTypes.NUMBER
   },
@@ -194,19 +198,19 @@ export const NotasFiscais = sequelize.define<NotasFiscaisInstance>('NotasFiscais
   procedencia: {
     type: DataTypes.NUMBER
   },
-  baseDiferencia: {
+  baseDiferenca: {
     type: DataTypes.NUMBER
   },
   cvfPis: {
     type: DataTypes.NUMBER
   },
-  cvfConfins: {
+  cvfCofins: {
     type: DataTypes.NUMBER
   },
   percPis: {
     type: DataTypes.NUMBER
   },
-  percConfins: {
+  percCofins: {
     type: DataTypes.NUMBER
   },
   basePisCofins: {

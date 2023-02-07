@@ -3,16 +3,18 @@ import { sequelize } from '../instances/mdb';
 
 export interface NotasFiscaisTotalMesInstance extends Model {
   
-  totalSaida: number;
+  totalMesSaida: number;
   
 }
 
-export const NotasFiscais = sequelize.define<NotasFiscaisTotalMesInstance>('NotasFiscaisTotalMes', {
+export const NotasFiscaisTotalMes = sequelize.define<NotasFiscaisTotalMesInstance>('NotasFiscaisTotalMes', {
   
-  totalSaida: {
+  totalMesSaida: {
     type: DataTypes.NUMBER
   }
 },{
   tableName: 'vwnotasfiscaistotalmes',
   timestamps: false
 });
+
+NotasFiscaisTotalMes.removeAttribute('id');
