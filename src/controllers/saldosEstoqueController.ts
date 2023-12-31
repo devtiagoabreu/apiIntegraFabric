@@ -4,14 +4,14 @@ import sequelize from "sequelize";
 
 export const listarSaldosEstoque = async (req: Request, res: Response) => {
   
-  let lista = await SaldosEstoque.findAll({
+  let listaSaldosEstoque = await SaldosEstoque.findAll({
     where: {
       emp: '1'
     }
   });
 
   res.status(200);
-  res.json({ lista });
+  res.json({ listaSaldosEstoque });
 }
 
   
